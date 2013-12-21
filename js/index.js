@@ -6,9 +6,10 @@ $(function(){
     setTimeout(function(){
       $("#results ul").empty();
       $("#results ul").append($("#featured ul").html());
-      $("#spin").removeClass("show").addClass("hide");
+      $("#spin").removeClass("show");
     }, 500);
   }
 
-  $("#main-form input, #main-form select").change(findTeams);
+  $("#main-form input").keyup(findTeams);
+  $("#main-form select").change(findTeams);
 });

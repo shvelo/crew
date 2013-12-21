@@ -10,57 +10,20 @@
   }
 }
 
-@-webkit-keyframes hide {
-  /* line 12, ../sass/spinner.scss */
-  0% {
-    opacity: 1;
-  }
-
-  /* line 16, ../sass/spinner.scss */
-  99% {
-    display: block;
-    opacity: 0;
-  }
-
-  /* line 21, ../sass/spinner.scss */
-  100% {
-    display: none;
-  }
-}
-
-@-webkit-keyframes show {
-  /* line 27, ../sass/spinner.scss */
-  0% {
-    opacity: 0;
-    display: none;
-  }
-
-  /* line 32, ../sass/spinner.scss */
-  1% {
-    opacity: 0;
-    display: block;
-  }
-
-  /* line 37, ../sass/spinner.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-/* line 42, ../sass/spinner.scss */
+/* line 11, ../sass/spinner.scss */
 #spin {
   text-align: center;
-  display: none;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: .6s;
 }
-/* line 46, ../sass/spinner.scss */
-#spin.hide {
-  -webkit-animation: hide 1s;
-}
-/* line 50, ../sass/spinner.scss */
+/* line 18, ../sass/spinner.scss */
 #spin.show {
-  -webkit-animation: show 1s;
+  height: 2em;
+  opacity: 1;
 }
-/* line 54, ../sass/spinner.scss */
+/* line 23, ../sass/spinner.scss */
 #spin .dot {
   width: 1em;
   height: 1em;
@@ -69,11 +32,11 @@
   background: rgba(0, 0, 0, 0.5);
   -webkit-animation: dots .3s infinite;
 }
-/* line 63, ../sass/spinner.scss */
+/* line 32, ../sass/spinner.scss */
 #spin .dot:nth-child(2) {
   -webkit-animation-delay: .1s;
 }
-/* line 66, ../sass/spinner.scss */
+/* line 35, ../sass/spinner.scss */
 #spin .dot:nth-child(3) {
   -webkit-animation-delay: .2s;
 }

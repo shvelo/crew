@@ -8,47 +8,16 @@
 	}
 }
 
-@-webkit-keyframes hide {
-	0% {
-		opacity: 1;
-	}
-
-	99% {
-		display: block;
-		opacity: 0;
-	}
-
-	100% {
-		display: none;
-	}
-}
-
-@-webkit-keyframes show {
-	0% {
-		opacity: 0;
-		display: none;
-	}
-
-	1% {
-		opacity: 0;
-		display: block;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
 #spin {
 	text-align: center;
-	display: none;
-
-	&.hide {
-		-webkit-animation: hide 1s;
-	}
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: .6s;
 
 	&.show {
-		-webkit-animation: show 1s;
+		height: 2em;
+		opacity: 1;
 	}
 
 	.dot {
