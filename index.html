@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
-	<title>Find ye crew!</title>
+	<title>Crew Finder</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="lib/typeahead-bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
 			    <i class="fa fa-bars"></i>
 				</button>
 
-				<a class="navbar-brand" href="#">Find ye crew!</a>
+				<a class="navbar-brand" href="#">Crew Finder</a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
@@ -24,7 +25,7 @@
 						<a href="#">Home</a>
 					</li>
 					<li>
-						<a href="#">Browse Teams</a>
+						<a href="#">Browse Hackathons</a>
 					</li>
 					<li>
 						<a href="#about">About</a>
@@ -33,7 +34,7 @@
 						<a href="#contact">Contact</a>
 					</li>
 				</ul>
-				<ul class="nav navbar-nav pull-right">
+				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<a href="#">Login</a>
 					</li>
@@ -46,79 +47,65 @@
 	</div>
 	<div class="container">
 		<form class="form-inline well" role="form" id="main-form">
-			I am a
-			<select class="form-control">
-				<option>professional</option>
-				<option>beginner</option>
-				<option>student</option>
+			I am
+			<select class="form-control" id="form-who">
+				<option>a developer</option>
+				<option>a designer</option>
+				<option>an engineer</option>
+				<option>an evil guy</option>
 			</select>
-			<select class="form-control">
-				<option>developer</option>
-				<option>designer</option>
-				<option>project manager</option>
-			</select>
-			and
-			I know
-			<input type="text" class="form-control input-large">
+			in
+			<input type="text" id="form-where" class="form-control">
+			hacking at
+			<input type="text" id="form-hackathon" class="form-control">
+			<button type="submit" class="btn btn-lg">Go</button>
 		</form>
-
-		<div id="teams">
-			<div id="results">
-				<div id="spin">
-					<span class="dot"></span>
-					<span class="dot"></span>
-					<span class="dot"></span>
-				</div>
-				<div class="teams">
-					
-				</div>
-			</div>
-			<div id="featured">
-				<h2>Featured teams</h2>
-				<div class="teams">
-					<div class="row">
-						<div class="team col-md-2">
-							<img src="http://lorempixel.com/g/300/300/technics">
-							<span>Evil Zombie</span>
-							<p>Evil Ipsum sit amet team cool good stuff wow much doge</p>
-						</div>
-						<div class="team col-md-2">
-							<img src="http://lorempixel.com/g/301/301/abstract">
-							<span>DaaS</span>
-							<p>Doge as a service wow much service very server cloud wow</p>
-						</div>
-						<div class="team col-md-2">
-							<img src="http://lorempixel.com/g/302/300/business">
-							<span>Much Team</span>
-							<p>wow such team</p>
-						</div>
-						<div class="team col-md-2">
-							<img src="http://lorempixel.com/g/303/300/people">
-							<span>Pedobear</span>
-							<p>I love little girls</p>
-						</div>
-						<div class="team col-md-2">
-							<img src="http://lorempixel.com/g/302/302/city">
-							<span>Spoderman</span>
-							<p>spoderman spoderman dose whatevur teh spoderman dose</p>
-						</div>
-						<div class="team col-md-2">
-							<img src="http://lorempixel.com/g/305/300/technics">
-							<span>Unkel Dolan</span>
-							<p>shutup</p>
-						</div>
+		<div id="featured">
+			<h2>Featured hackathons</h2>
+			<div class="hackathons">
+				<div class="row">
+					<div class="hackathon col-md-2">
+						<img src="http://lorempixel.com/g/300/300/technics">
+						<span>HackMIT</span>
+						<p>Evil Ipsum sit amet hackathon cool good stuff wow much doge</p>
 					</div>
-				</teams>
-			</div>
+					<div class="hackathon col-md-2">
+						<img src="http://lorempixel.com/g/301/301/abstract">
+						<span>Hack@CST</span>
+						<p>Doge as a service wow much service very server cloud wow</p>
+					</div>
+					<div class="hackathon col-md-2">
+						<img src="http://lorempixel.com/g/302/300/business">
+						<span>Weekend MiniHack</span>
+						<p>wow such hackathon</p>
+					</div>
+					<div class="hackathon col-md-2">
+						<img src="http://lorempixel.com/g/303/300/people">
+						<span>GDG Tbilisi</span>
+						<p>spoderman pls dunt kil me</p>
+					</div>
+					<div class="hackathon col-md-2">
+						<img src="http://lorempixel.com/g/302/302/city">
+						<span>Spoderman Films</span>
+						<p>spoderman spoderman dose whatevur teh spoderman dose</p>
+					</div>
+					<div class="hackathon col-md-2">
+						<img src="http://lorempixel.com/g/305/300/technics">
+						<span>Unkel Dolan Studio</span>
+						<p>gooby pls koding time</p>
+					</div>
+				</div>
+			</hackathons>
 		</div>
 
-		<div id="new-team">
-			<a href="#" class="btn btn-block btn-success btn-lg">
-				Create a team!
+		<div id="register-hackathon">
+			<a href="#" class="btn btn-block btn-info btn-lg">
+				Hosting a hackathon?
 			</a>
 		</div>
 	</div>
 	<script src="lib/jquery-2.0.3.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="lib/typeahead.min.js"></script>
 	<script src="js/index.js"></script>
 </body>

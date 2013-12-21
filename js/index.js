@@ -1,15 +1,16 @@
 $(function(){
   "use strict";
 
-  var findTeams = function() {
-    $("#spin").addClass("show");
-    setTimeout(function(){
-      $("#results .teams").empty();
-      $("#results .teams").append($("#featured .teams").html());
-      $("#spin").removeClass("show");
-    }, 500);
-  }
+  $("#form-where").typeahead({
+    name: "where",
+    local: ["Georgia", "USA", "India", "Mcdolans"]
+  });
 
-  $("#main-form input").keyup(findTeams);
-  $("#main-form select").change(findTeams);
+  $("#form-hackathon").typeahead({
+    name: "hackathon",
+    local: ["Hack@CST", "HackMIT", "DevFest Tbilisi", "Weekend MiniHack"]
+  });
+
+  $("#main-form").submit(function() {
+  })
 });

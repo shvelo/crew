@@ -1,105 +1,71 @@
-@-webkit-keyframes dots {
-  /* line 2, ../sass/spinner.scss */
-  0% {
-    background: rgba(0, 0, 0, 0.5);
-  }
-
-  /* line 6, ../sass/spinner.scss */
-  50% {
-    background: rgba(0, 0, 0, 0.1);
-  }
-}
-
-/* line 11, ../sass/spinner.scss */
-#spin {
-  text-align: center;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: .6s;
-}
-/* line 18, ../sass/spinner.scss */
-#spin.show {
-  height: 2em;
-  opacity: 1;
-}
-/* line 23, ../sass/spinner.scss */
-#spin .dot {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  margin: .5em;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-animation: dots .3s infinite;
-}
-/* line 32, ../sass/spinner.scss */
-#spin .dot:nth-child(2) {
-  -webkit-animation-delay: .1s;
-}
-/* line 35, ../sass/spinner.scss */
-#spin .dot:nth-child(3) {
-  -webkit-animation-delay: .2s;
-}
-
-@font-face {
-  font-family: "Freebooter Regular";
-  src: url("../font/Freebooter Regular.ttf");
-}
-
-/* line 9, ../sass/style.scss */
+/* line 3, ../sass/style.scss */
 body {
   padding-bottom: 1em;
 }
 
-/* line 13, ../sass/style.scss */
+/* line 7, ../sass/style.scss */
 h2 {
   color: #5A5A5A;
   text-align: center;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 13, ../sass/style.scss */
 .navbar-default .navbar-brand {
   font-family: "Freebooter Regular", sans-serif;
   font-size: 2em;
   color: #2d2d2d;
 }
-/* line 25, ../sass/style.scss */
+/* line 19, ../sass/style.scss */
 .navbar-default a {
   font-size: 1.3em;
 }
 
-/* line 30, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 #main-form {
-  font-size: 2em;
+  font-size: 1.8em;
   text-align: center;
   color: #5A5A5A;
+  line-height: 2;
+  padding: .5em .5em .7em .5em;
 }
-/* line 35, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
+#main-form .tt-hint {
+  top: -999999px !important;
+  left: -999999px !important;
+}
+/* line 36, ../sass/style.scss */
+#main-form input.form-control {
+  width: 7em;
+}
+/* line 40, ../sass/style.scss */
 #main-form .form-control {
   font-size: 1em;
   width: auto;
   height: auto;
   display: inline-block;
+  background: white !important;
+  vertical-align: middle !important;
+  padding: .1em 0.3em;
 }
-/* line 41, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 #main-form .form-control option {
   text-align: center;
 }
 
-/* line 47, ../sass/style.scss */
-.teams {
+/* line 55, ../sass/style.scss */
+.hackathons {
   padding: 1em 0;
 }
-/* line 51, ../sass/style.scss */
-.teams .team img {
+/* line 59, ../sass/style.scss */
+.hackathons .hackathon img {
   border-radius: 50%;
   width: 10em;
   height: 10em;
   margin: 0 auto;
   display: block;
 }
-/* line 59, ../sass/style.scss */
-.teams .team span {
+/* line 67, ../sass/style.scss */
+.hackathons .hackathon span {
   padding: .2em;
   max-width: 100%;
   display: block;
@@ -107,15 +73,15 @@ h2 {
   text-align: center;
   text-overflow: ellipsis;
 }
-/* line 68, ../sass/style.scss */
-.teams .team p {
+/* line 76, ../sass/style.scss */
+.hackathons .hackathon p {
   text-align: justify;
   font-size: 1.1em;
   word-wrap: break-word;
 }
 
-/* line 76, ../sass/style.scss */
-#new-team a {
+/* line 84, ../sass/style.scss */
+#register-hackathon a {
   font-size: 3em;
   padding-top: .1em;
   padding-bottom: .1em;
