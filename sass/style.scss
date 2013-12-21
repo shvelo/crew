@@ -6,41 +6,8 @@
   src: url("../font/Freebooter Regular.ttf");
 }
 
-.navbar-default .navbar-brand {
-	font-family: "Freebooter Regular", sans-serif;
-	font-size: 2em;
-	color: #2d2d2d;
-}
-
-.navbar-nav a {
-	font-size: 1.3em;
-}
-
 body {
 	padding-bottom: 1em;
-}
-
-#main-form {
-	font-size: 2em;
-	text-align: center;
-	color: #5A5A5A;
-}
-
-#main-form .form-control {
-	font-size: 1em;
-	width: auto;
-	height: auto;
-	display: inline-block;
-}
-
-#main-form .form-control option {
-	text-align: center;
-}
-
-.bootstrap-tagsinput {
-	padding-top: 0;
-	line-height: inherit;
-	margin-bottom: 0;
 }
 
 h2 {
@@ -48,31 +15,62 @@ h2 {
 	text-align: center;
 }
 
-#teams .team {
-	
+.navbar-default {
+	.navbar-brand {
+		font-family: "Freebooter Regular", sans-serif;
+		font-size: 2em;
+		color: #2d2d2d;
+	}
+
+	a {
+		font-size: 1.3em;
+	}
 }
 
-#teams .team img {
-	border-radius: 50%;
-	width: 10em;
-	height: 10em;
-	margin: 0 auto;
-	display: block;
-}
-
-#teams .team span {
-	padding: .2em;
-	max-width: 100%;
-	display: block;
-	font-size: 1.5em;
+#main-form {
+	font-size: 2em;
 	text-align: center;
-	text-overflow: ellipsis;
+	color: #5A5A5A;
+
+	.form-control {
+		font-size: 1em;
+		width: auto;
+		height: auto;
+		display: inline-block;
+
+		option {
+			text-align: center;
+		}
+	}
 }
 
-#teams .team p {
-	text-align: justify;
-	font-size: 1.1em;
-	word-wrap: break-word;
+.teams {
+	padding: 1em 0;
+
+	.team {
+		img {
+			border-radius: 50%;
+			width: 10em;
+			height: 10em;
+			margin: 0 auto;
+			display: block;
+		}
+
+		span {
+			padding: .2em;
+			max-width: 100%;
+			display: block;
+			font-size: 1.5em;
+			text-align: center;
+			text-overflow: ellipsis;
+		}
+
+		p {
+			text-align: justify;
+			font-size: 1.1em;
+			word-wrap: break-word;
+		}
+	}
 }
 
 #new-team a {

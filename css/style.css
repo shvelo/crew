@@ -47,66 +47,59 @@
 }
 
 /* line 9, ../sass/style.scss */
+body {
+  padding-bottom: 1em;
+}
+
+/* line 13, ../sass/style.scss */
+h2 {
+  color: #5A5A5A;
+  text-align: center;
+}
+
+/* line 19, ../sass/style.scss */
 .navbar-default .navbar-brand {
   font-family: "Freebooter Regular", sans-serif;
   font-size: 2em;
   color: #2d2d2d;
 }
-
-/* line 15, ../sass/style.scss */
-.navbar-nav a {
+/* line 25, ../sass/style.scss */
+.navbar-default a {
   font-size: 1.3em;
 }
 
-/* line 19, ../sass/style.scss */
-body {
-  padding-bottom: 1em;
-}
-
-/* line 23, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 #main-form {
   font-size: 2em;
   text-align: center;
   color: #5A5A5A;
 }
-
-/* line 29, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 #main-form .form-control {
   font-size: 1em;
   width: auto;
   height: auto;
   display: inline-block;
 }
-
-/* line 36, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 #main-form .form-control option {
   text-align: center;
 }
 
-/* line 40, ../sass/style.scss */
-.bootstrap-tagsinput {
-  padding-top: 0;
-  line-height: inherit;
-  margin-bottom: 0;
+/* line 47, ../sass/style.scss */
+.teams {
+  padding: 1em 0;
 }
-
-/* line 46, ../sass/style.scss */
-h2 {
-  color: #5A5A5A;
-  text-align: center;
-}
-
-/* line 55, ../sass/style.scss */
-#teams .team img {
+/* line 51, ../sass/style.scss */
+.teams .team img {
   border-radius: 50%;
   width: 10em;
   height: 10em;
   margin: 0 auto;
   display: block;
 }
-
-/* line 63, ../sass/style.scss */
-#teams .team span {
+/* line 59, ../sass/style.scss */
+.teams .team span {
   padding: .2em;
   max-width: 100%;
   display: block;
@@ -114,15 +107,14 @@ h2 {
   text-align: center;
   text-overflow: ellipsis;
 }
-
-/* line 72, ../sass/style.scss */
-#teams .team p {
+/* line 68, ../sass/style.scss */
+.teams .team p {
   text-align: justify;
   font-size: 1.1em;
   word-wrap: break-word;
 }
 
-/* line 78, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 #new-team a {
   font-size: 3em;
   padding-top: .1em;
