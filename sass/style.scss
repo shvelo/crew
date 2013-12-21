@@ -1,0 +1,19 @@
+@import "compass";
+
+#main-form {
+	font-size: 2em;
+	text-align: center;
+}
+
+#main-form .form-control {
+	font-size: 1em;
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
+.bootstrap-tagsinput {
+	padding-top: 0;
+	line-height: inherit;
+	margin-bottom: 0;
+}

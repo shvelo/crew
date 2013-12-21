@@ -4,22 +4,20 @@
 	<title>Find ye crew!</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="lib/bootstrap-tagsinput/bootstrap-tagsinput.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">
-						Toggle navigation
-					</span>
-					<span class="icon-bar">
-					</span>
-					<span class="icon-bar">
-					</span>
-					<span class="icon-bar">
-					</span>
+				<span class="sr-only">Toggle navigation</span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
 				</button>
+
 				<a class="navbar-brand" href="#">Find ye crew</a>
 			</div>
 			<div class="collapse navbar-collapse">
@@ -38,6 +36,18 @@
 		</div>
 	</div>
 	<div class="container">
-		
+		<form class="form-inline well" role="form" id="main-form">
+			I am a
+			<select class="form-control">
+				<option>developer</option>
+				<option>designer</option>
+			</select>
+			and
+			I know
+			<input type="text" class="form-control col-md-5" data-role="tagsinput">
+		</form>
 	</div>
+	<script src="lib/jquery-2.0.3.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="lib/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
 </body>

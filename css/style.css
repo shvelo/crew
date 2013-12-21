@@ -1,0 +1,20 @@
+/* line 3, ../sass/style.scss */
+#main-form {
+  font-size: 2em;
+  text-align: center;
+}
+
+/* line 8, ../sass/style.scss */
+#main-form .form-control {
+  font-size: 1em;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+
+/* line 15, ../sass/style.scss */
+.bootstrap-tagsinput {
+  padding-top: 0;
+  line-height: inherit;
+  margin-bottom: 0;
+}
