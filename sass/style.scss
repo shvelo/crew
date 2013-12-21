@@ -3,6 +3,7 @@
 #main-form {
 	font-size: 2em;
 	text-align: center;
+	color: #5A5A5A;
 }
 
 #main-form .form-control {
@@ -12,8 +13,17 @@
 	display: inline-block;
 }
 
+#main-form .form-control option {
+	text-align: center;
+}
+
 .bootstrap-tagsinput {
 	padding-top: 0;
 	line-height: inherit;
 	margin-bottom: 0;
+}
+
+h2 {
+	color: #5A5A5A;
+	text-align: center;
 }

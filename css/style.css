@@ -2,9 +2,10 @@
 #main-form {
   font-size: 2em;
   text-align: center;
+  color: #5A5A5A;
 }
 
-/* line 8, ../sass/style.scss */
+/* line 9, ../sass/style.scss */
 #main-form .form-control {
   font-size: 1em;
   width: auto;
@@ -12,9 +13,20 @@
   display: inline-block;
 }
 
-/* line 15, ../sass/style.scss */
+/* line 16, ../sass/style.scss */
+#main-form .form-control option {
+  text-align: center;
+}
+
+/* line 20, ../sass/style.scss */
 .bootstrap-tagsinput {
   padding-top: 0;
   line-height: inherit;
   margin-bottom: 0;
+}
+
+/* line 26, ../sass/style.scss */
+h2 {
+  color: #5A5A5A;
+  text-align: center;
 }
