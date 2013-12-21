@@ -1,5 +1,9 @@
 @import "compass";
 
+.container {
+	padding-bottom: 1em;
+}
+
 #main-form {
 	font-size: 2em;
 	text-align: center;
@@ -26,4 +30,37 @@
 h2 {
 	color: #5A5A5A;
 	text-align: center;
+}
+
+#teams ul {
+	text-align: center;
+	padding: .5em;
+	margin: 0;
+	list-style: none;
+}
+
+#teams li {
+	display: inline-block;
+	font-size: 1.5em;
+	color: white;
+	position: relative;
+	width: 10em;
+	height: 10em;
+	margin: .1em;
+}
+
+#teams li span {
+	position: absolute;
+	bottom: 0;
+	background: rgba(0,0,0,0.7);
+	padding: .5em;
+	display: block;
+	width: 10em;
+}
+
+#new-team a {
+	font-size: 2em;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	transition: background .5s;
 }
