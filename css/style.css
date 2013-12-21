@@ -54,18 +54,23 @@
 }
 
 /* line 15, ../sass/style.scss */
+.navbar-nav a {
+  font-size: 1.3em;
+}
+
+/* line 19, ../sass/style.scss */
 body {
   padding-bottom: 1em;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
 #main-form {
   font-size: 2em;
   text-align: center;
   color: #5A5A5A;
 }
 
-/* line 25, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 #main-form .form-control {
   font-size: 1em;
   width: auto;
@@ -73,25 +78,25 @@ body {
   display: inline-block;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 #main-form .form-control option {
   text-align: center;
 }
 
-/* line 36, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 .bootstrap-tagsinput {
   padding-top: 0;
   line-height: inherit;
   margin-bottom: 0;
 }
 
-/* line 42, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 h2 {
   color: #5A5A5A;
   text-align: center;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 #teams ul {
   text-align: center;
   padding: .5em;
@@ -99,7 +104,7 @@ h2 {
   list-style: none;
 }
 
-/* line 54, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 #teams li {
   display: inline-block;
   font-size: 1.5em;
@@ -110,7 +115,7 @@ h2 {
   margin: .1em;
 }
 
-/* line 64, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 #teams li span {
   position: absolute;
   bottom: 0;
@@ -120,7 +125,7 @@ h2 {
   width: 10em;
 }
 
-/* line 73, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 #new-team a {
   font-size: 4em;
   padding-top: .2em;
