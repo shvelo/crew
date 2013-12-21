@@ -96,36 +96,33 @@ h2 {
   text-align: center;
 }
 
-/* line 51, ../sass/style.scss */
-#teams ul {
-  text-align: center;
-  padding: .5em;
-  margin: 0;
-  list-style: none;
-}
-
-/* line 58, ../sass/style.scss */
-#teams li {
-  display: inline-block;
-  font-size: 1.5em;
-  color: white;
-  position: relative;
+/* line 55, ../sass/style.scss */
+#teams .team img {
+  border-radius: 50%;
   width: 10em;
   height: 10em;
-  margin: .1em;
-}
-
-/* line 68, ../sass/style.scss */
-#teams li span {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  padding: .5em;
+  margin: 0 auto;
   display: block;
-  width: 10em;
 }
 
-/* line 77, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
+#teams .team span {
+  padding: .2em;
+  max-width: 100%;
+  display: block;
+  font-size: 1.5em;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+/* line 72, ../sass/style.scss */
+#teams .team p {
+  text-align: justify;
+  font-size: 1.1em;
+  word-wrap: break-word;
+}
+
+/* line 78, ../sass/style.scss */
 #new-team a {
   font-size: 3em;
   padding-top: .1em;

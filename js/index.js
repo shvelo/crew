@@ -4,8 +4,8 @@ $(function(){
   var findTeams = function() {
     $("#spin").addClass("show");
     setTimeout(function(){
-      $("#results ul").empty();
-      $("#results ul").append($("#featured ul").html());
+      $("#results .teams").empty();
+      $("#results .teams").append($("#featured .teams").html());
       $("#spin").removeClass("show");
     }, 500);
   }
