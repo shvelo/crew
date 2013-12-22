@@ -7,8 +7,11 @@
 	<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" href="lib/typeahead-bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="lib/angular.min.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/controllers.js"></script>
 </head>
-<body ng-app>
+<body ng-app="hackathonApp">
 	<div class="navbar navbar-default navbar-static-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -55,44 +58,21 @@
 				<option>an evil guy</option>
 			</select>
 			in
-			<input type="text" id="form-where" ng-model="country" ng-init="country='Georgia'" class="form-control" placeholder="a country">
+			<select class="form-control" id="form-where" ng-model="country">
+				<option ng-repeat="country in window.data.countries">{{country}}</option>
+			</select>
 			hacking at
 			<input type="text" id="form-hackathon" class="form-control" placeholder="a hackathon">
 			<button type="submit" class="btn btn-lg">Go</button>
 		</form>
 		<div id="featured">
 			<h2>Featured hackathons in {{country}}</h2>
-			<div class="hackathons">
+			<div class="hackathons" ng-controller="hackathonCtrl">
 				<div class="row">
-					<div class="hackathon col-md-2">
-						<img src="http://lorempixel.com/g/300/300/technics">
-						<span>HackMIT</span>
-						<p>Evil Ipsum sit amet hackathon cool good stuff wow much doge</p>
-					</div>
-					<div class="hackathon col-md-2">
-						<img src="http://lorempixel.com/g/301/301/abstract">
-						<span>Hack@CST</span>
-						<p>Doge as a service wow much service very server cloud wow</p>
-					</div>
-					<div class="hackathon col-md-2">
-						<img src="http://lorempixel.com/g/302/300/business">
-						<span>Weekend MiniHack</span>
-						<p>wow such hackathon much coder very weekend</p>
-					</div>
-					<div class="hackathon col-md-2">
-						<img src="http://lorempixel.com/g/303/300/people">
-						<span>GDG Tbilisi Hack2</span>
-						<p>wow much gdg very google</p>
-					</div>
-					<div class="hackathon col-md-2">
-						<img src="http://lorempixel.com/g/302/302/city">
-						<span>SpodermanHack</span>
-						<p>spoderman spoderman dose whatevur teh spoderman dose</p>
-					</div>
-					<div class="hackathon col-md-2">
-						<img src="http://lorempixel.com/g/305/300/technics">
-						<span>Unkel Dolan HackCon</span>
-						<p>gooby pls koding time</p>
+					<div class="hackathon col-md-2 col-xs-6 col-sm-4" ng-repeat="hackathon in hackathons">
+						<img src="{{hackathon.picture}}">
+						<a href="#">{{hackathon.name}}</a>
+						<p>{{hackathon.description}}</p>
 					</div>
 				</div>
 			</hackathons>
@@ -104,7 +84,6 @@
 			</a>
 		</div>
 	</div>
-	<script src="lib/angular.min.js"></script>
 	<script src="lib/jquery-2.0.3.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="lib/typeahead.min.js"></script>

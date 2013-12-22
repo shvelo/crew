@@ -64,13 +64,15 @@ h2 {
 			display: block;
 		}
 
-		span {
+		a {
 			padding: .2em;
 			max-width: 100%;
 			display: block;
 			font-size: 1.3em;
 			text-align: center;
 			text-overflow: ellipsis;
+			text-decoration: none;
+			color: #2d2d2d;
 		}
 
 		p {

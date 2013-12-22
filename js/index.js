@@ -1,17 +1,20 @@
-"use strict";
+(function(){
+  "use strict";
 
-$("#form-where").typeahead({
-  name: "where",
-  local: ["Georgia", "USA", "India", "Mcdolans"]
-});
+  if(!('localStorage' in window && 'map' in [])) {
+    alert("U MAD BRO????");
+  }
 
-$("#form-hackathon").typeahead({
-  name: "hackathon",
-  local: ["Hack@CST", "HackMIT", "DevFest Tbilisi", "Weekend MiniHack"]
-});
+  var hackathon_names = data.hackathons.map(function(hackathon){ return hackathon.name });
 
-if("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function(location) {
-    console.log(location)
-  })
-}
+  $("#form-hackathon").typeahead({
+    name: "hackathon",
+    local: hackathon_names
+  });
+
+  if("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(function(location) {
+      console.log(location)
+    })
+  }
+})();
