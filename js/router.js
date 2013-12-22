@@ -4,6 +4,6 @@ CrewFinder.Router.map(function () {
 
 CrewFinder.CrewfinderRoute = Ember.Route.extend({
   model: function () {
-    return this.store.find('hackathon');
+    return this.store.find('country');
   }
 });

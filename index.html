@@ -13,7 +13,8 @@
 	<div class="navbar navbar-default navbar-static-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<button type="button" class="navbar-toggle"
+				data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="sr-only">Toggle navigation</span>
 			    <i class="fa fa-bars"></i>
 				</button>
@@ -57,14 +58,16 @@
 			</select>
 			in
 			<select class="form-control" id="form-where">
-				<option>{{country}}</option>
+				{{#each}}
+				<option>{{name}}</option>
+				{{/each}}
 			</select>
 			hacking at
 			<input type="text" id="form-hackathon" class="form-control" placeholder="a hackathon">
 			<button type="submit" class="btn btn-lg">Go</button>
 		</form>
 		<div id="featured">
-			<h2>Featured hackathons in country</h2>
+			<h2>Featured hackathons in {{country}}</h2>
 			<div class="hackathons">
 				<div class="row">
 					{{#each}}
@@ -88,7 +91,7 @@
 
 <script src="lib/jquery-2.0.3.min.js"></script>
 <script src="lib/handlebars.js"></script>
-<script src="lib/ember.min.js"></script>
+<script src="lib/ember.js"></script>
 <script src="lib/ember-data.js"></script>
 <script src="js/data.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
@@ -96,4 +99,5 @@
 <script src="js/application.js"></script>
 <script src="js/router.js"></script>
 <script src="js/models/hackathon.js"></script>
+<script src="js/models/country.js"></script>
 </body>
