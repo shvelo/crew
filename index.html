@@ -8,7 +8,8 @@
 	<link rel="stylesheet" href="lib/typeahead-bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-app="hackathonApp">
+<body>
+<script type="text/x-handlebars" data-template-name="crewfinder">
 	<div class="navbar navbar-default navbar-static-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -55,22 +56,24 @@
 				<option>an evil guy</option>
 			</select>
 			in
-			<select class="form-control" id="form-where" ng-model="country">
-				<option ng-repeat="country in window.data.countries">{{country}}</option>
+			<select class="form-control" id="form-where">
+				<option>{{country}}</option>
 			</select>
 			hacking at
 			<input type="text" id="form-hackathon" class="form-control" placeholder="a hackathon">
 			<button type="submit" class="btn btn-lg">Go</button>
 		</form>
 		<div id="featured">
-			<h2>Featured hackathons in {{country}}</h2>
+			<h2>Featured hackathons in country</h2>
 			<div class="hackathons" ng-controller="hackathonCtrl">
 				<div class="row">
-					<div class="hackathon col-md-2 col-xs-6 col-sm-4" ng-repeat="hackathon in hackathons">
+					{{#each hackathon}}
+					<div class="hackathon col-md-2 col-xs-6 col-sm-4">
 						<img src="{{hackathon.picture}}">
 						<a href="#">{{hackathon.name}}</a>
 						<p>{{hackathon.description}}</p>
 					</div>
+					{{/each}}
 				</div>
 			</hackathons>
 		</div>
@@ -81,11 +84,16 @@
 			</a>
 		</div>
 	</div>
-	<script src="lib/jquery-2.0.3.min.js"></script>
-	<script src="lib/handlebars.js"></script>
-	<script src="lib/ember.min.js"></script>
-	<script src="js/data.js"></script>
-	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-	<script src="lib/typeahead.min.js"></script>
-	<script src="js/index.js"></script>
+</script>
+
+<script src="lib/jquery-2.0.3.min.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="lib/ember.min.js"></script>
+<script src="lib/ember-data.js"></script>
+<script src="js/data.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/typeahead.min.js"></script>
+<script src="js/application.js"></script>
+<script src="js/router.js"></script>
+<script src="js/models/hackathon.js"></script>
 </body>
