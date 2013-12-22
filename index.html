@@ -57,20 +57,17 @@
 				<option>an evil guy</option>
 			</select>
 			in
-			<select class="form-control" id="form-where">
-				{{#each}}
-				<option>{{name}}</option>
-				{{/each}}
-			</select>
+			{{view Ember.Select content=model class="form-control" value=selectedCountry
+				optionValuePath="content.id" optionLabelPath="content.name"}}
 			hacking at
 			<input type="text" id="form-hackathon" class="form-control" placeholder="a hackathon">
 			<button type="submit" class="btn btn-lg">Go</button>
 		</form>
 		<div id="featured">
-			<h2>Featured hackathons in {{country}}</h2>
+			<h2>Featured hackathons in {{selectedCountry.name}}</h2>
 			<div class="hackathons">
 				<div class="row">
-					{{#each}}
+					{{#each selectedCountry.hackathons}}
 					<div class="hackathon col-md-2 col-xs-6 col-sm-4">
 						<img {{bind-attr src=picture}}>
 						<a href="#">{{name}}</a>
@@ -98,6 +95,7 @@
 <script src="lib/typeahead.min.js"></script>
 <script src="js/application.js"></script>
 <script src="js/router.js"></script>
+<script src="js/controllers/crewfinder_controller.js"></script>
 <script src="js/models/hackathon.js"></script>
 <script src="js/models/country.js"></script>
 </body>
