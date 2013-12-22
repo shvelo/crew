@@ -1,9 +1,8 @@
 CrewFinder.Hackathon = DS.Model.extend({
-  id: DS.attr('string'),
-  name: DS.attr('string'),
-  description: DS.attr('string'),
-  picture: DS.attr('string'),
-  featured: DS.attr('boolean')
+  name: DS.attr(),
+  description: DS.attr(),
+  picture: DS.attr(),
+  featured: DS.attr()
 });
 
 CrewFinder.Hackathon.FIXTURES = data.hackathons;
