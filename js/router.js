@@ -2,8 +2,8 @@ CrewFinder.Router.map(function () {
   this.resource('crewfinder', { path: '/' });
 });
 
-CrewFinder.HackathonsRoute = Ember.Route.extend({
+CrewFinder.HackathonRoute = Ember.Route.extend({
   model: function () {
-    return this.store.find('hackathon');
+    return this.store.find('hackathon', 1);
   }
 });

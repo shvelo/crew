@@ -1,12 +1,10 @@
 (function(){
-  "use strict";
-
   if(!('localStorage' in window && 'map' in [])) {
     alert("U MAD BRO????");
   }
 
   window.CrewFinder = Ember.Application.create();
-  CrewFinder.ApplicationAdapter = DS.FixtureAdapter.extend();
+  CrewFinder.ApplicationAdapter = DS.FixtureAdapter;
 
   var hackathon_names = data.hackathons.map(function(hackathon){ return hackathon.name });
 

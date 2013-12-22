@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<script type="text/x-handlebars" data-template-name="crewfinder">
+<script type="text/x-handlebars" data-template-name="crewfinder" data-model="hackathon">
 	<div class="navbar navbar-default navbar-static-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -67,11 +67,11 @@
 			<h2>Featured hackathons in country</h2>
 			<div class="hackathons" ng-controller="hackathonCtrl">
 				<div class="row">
-					{{#each hackathon}}
+					{{#each}}
 					<div class="hackathon col-md-2 col-xs-6 col-sm-4">
-						<img src="{{hackathon.picture}}">
-						<a href="#">{{hackathon.name}}</a>
-						<p>{{hackathon.description}}</p>
+						<img src="{{picture}}">
+						<a href="#">{{name}}</a>
+						<p>{{description}}</p>
 					</div>
 					{{/each}}
 				</div>
