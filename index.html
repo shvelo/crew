@@ -57,8 +57,8 @@
 				<option>an evil guy</option>
 			</select>
 			in
-			{{view Ember.Select content=model class="form-control" value=selectedCountry
-				optionValuePath="content.id" optionLabelPath="content.name"}}
+			{{view Ember.Select contentBinding=model class="form-control" valueBinding=selectedCountry
+				optionValuePath="content" optionLabelPath="content.name"}}
 			hacking at
 			<input type="text" id="form-hackathon" class="form-control" placeholder="a hackathon">
 			<button type="submit" class="btn btn-lg">Go</button>
