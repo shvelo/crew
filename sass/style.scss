@@ -52,10 +52,10 @@ h2 {
 	}
 }
 
-.hackathons {
+.hackathons, .hackers {
 	padding: 1em 0;
 
-	.hackathon {
+	.hackathon, .hacker {
 		img {
 			border-radius: 50%;
 			width: 10em;
@@ -81,6 +81,14 @@ h2 {
 			word-wrap: break-word;
 		}
 	}
+}
+
+.whoops {
+	text-align: center;
+	color: #ddd;
+	font-weight: bold;
+	font-size: 2em;
+	padding: 1em;
 }
 
 #register-hackathon a {

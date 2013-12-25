@@ -68,14 +68,35 @@
 			<div class="hackathons">
 				<div class="row">
 					{{#each selectedCountry.hackathons}}
-					<div class="hackathon col-md-2 col-xs-6 col-sm-4">
-						<img {{bind-attr src=picture}}>
-						<a href="#">{{name}}</a>
-						<p>{{description}}</p>
-					</div>
+						{{#if featured}}
+						<div class="hackathon col-md-2 col-xs-6 col-sm-4">
+							<img {{bind-attr src=picture}}>
+							<a href="#">{{name}}</a>
+							<p>{{description}}</p>
+						</div>
+						{{/if}}
+					{{else}}
+						<div class="whoops">Nothing here!</div>
 					{{/each}}
 				</div>
-			</hackathons>
+			</div>
+
+			<h2>Featured hackers in {{selectedCountry.name}}</h2>
+			<div class="hackers">
+				<div class="row">
+					{{#each selectedCountry.hackers}}
+						{{#if featured}}
+						<div class="hacker col-md-2 col-xs-6 col-sm-4">
+							<img {{bind-attr src=picture}}>
+							<a href="#">{{name}}</a>
+							<p>{{bio}}</p>
+						</div>
+						{{/if}}
+					{{else}}
+						<div class="whoops">Nobody here!</div>
+					{{/each}}
+				</div>
+			</div>
 		</div>
 
 		<div id="register-hackathon">
@@ -98,4 +119,5 @@
 <script src="js/controllers/crewfinder_controller.js"></script>
 <script src="js/models/hackathon.js"></script>
 <script src="js/models/country.js"></script>
+<script src="js/models/hacker.js"></script>
 </body>

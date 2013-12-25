@@ -1,10 +1,20 @@
 var data = {
 	countries: [
-		{ id: "world", name: "The World", hackathons: ["everyhack"]},
-		{ id: "georgia", name: "Georgia", hackathons: ["hackatcst", "gdghack"] },
-		{ id: "us", name: "United States", hackathons: ["hackmit", "superhack"] },
-		{ id: "calsahara", name: "Calsahara", hackathons: ["dogehack"] },
+		{ id: "online", name: "Online", hackathons: ["everyhack"], hackers: [] },
+		{ id: "georgia", name: "Georgia", hackathons: ["hackatcst", "gdghack"], hackers: ["shvelo"] },
+		{ id: "us", name: "United States", hackathons: ["hackmit", "superhack"], hackers: [] },
+		{ id: "calsahara", name: "Calsahara", hackathons: ["dogehack"], hackers: [] },
 	],
+	hackers: [
+    	{
+    		id: "shvelo",
+    		name: "Nick Shvelidze",
+    		bio: "Hack On!",
+    		featured: true,
+    		picture: "http://blog.pirrate.me/img/pirate.png",
+    		country: "georgia",
+    	},
+    ],
 	hackathons: [
     	{
     		id: "hackatcst",
@@ -44,7 +54,7 @@ var data = {
     		description: "Everyone should hack!",
     		featured: true,
     		picture: "http://lorempixel.com/g/400/400/technics",
-    		country: "world"
+    		country: "online"
     	},
     	{
     		id: "dogehack",

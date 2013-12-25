@@ -9,9 +9,9 @@
   CrewFinder.CrewfinderView = Ember.View.extend({
     didInsertElement: function() {
         $("#form-hackathon").typeahead({
-        name: "hackathon",
-        local: data.hackathons.map(function(hackathon){ return hackathon.name })
-      });
+          name: "hackathon",
+          local: data.hackathons.map(function(hackathon){ return hackathon.name })
+        });
     }
   });
 })();
